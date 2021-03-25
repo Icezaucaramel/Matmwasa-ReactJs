@@ -1,9 +1,24 @@
-.container__movies-list{
+.container__movies-list {
     width: 100%;
-    background: #0C0032;
 }
 
-.header__movies-list{
+.container__pagination {
+    color: white;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.header__movies-list {
     width: 100%;
     height: 6.6vw;
     display: flex;
@@ -15,7 +30,7 @@
     padding-top: 3.229vw;
 }
 
-.buttons__movies-list{
+.buttons__movies-list {
     width: 100%;
     height: 4.479vw;
     display: flex;
@@ -23,7 +38,7 @@
     align-items: center;
 }
 
-.reload__buttons__movies-list{
+.reload__buttons__movies-list {
     background: #250190;
     width: 3.229vw;
     height: 3.021vw;
@@ -35,14 +50,14 @@
     cursor: pointer;
 }
 
-.reload__buttons__movies-list svg{
+.reload__buttons__movies-list svg {
     width: 1.927vw;
     height: 1.927vw;
     margin-bottom: 0.2vw;
     margin-right: 0.22vw;
 }
 
-.research__buttons__movies-list{
+.research__buttons__movies-list {
     background: #250190;
     width: 32.292vw;
     height: 4.479vw;
@@ -51,12 +66,12 @@
     align-items: center;
 }
 
-.research__buttons__movies-list form{
+.research__buttons__movies-list form {
     display: flex;
     align-items: center;
 }
 
-.research__buttons__movies-list svg{
+.research__buttons__movies-list svg {
     width: 2.604vw;
     height: 2.604vw;
     margin-left: 1.771vw;
@@ -65,7 +80,7 @@
     border-top: 3px solid #000000;
 }
 
-.research__buttons__movies-list input{
+.research__buttons__movies-list input {
     width: 23.631vw;
     height: 2.9vw;
     background: #250190;
@@ -75,14 +90,37 @@
     font-size: 1.2vw;
 }
 
-.research__buttons__movies-list input:hover{
+.research__buttons__movies-list input:hover {
     border: none;
 }
 
-.container_card-movie{
-    margin: 3.646vw auto;
+.container_card-movie {
+    margin: 0px auto;
+    margin-left: 1vw;
+    margin-top: 3.646vh;
     width: 96.250vw;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    min-height: 33vw;
+}
+
+input[type=text] {
+    background-color: none;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #0C0032; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #240090;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #3500D3; 
 }
