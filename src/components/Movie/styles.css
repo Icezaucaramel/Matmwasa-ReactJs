@@ -1,0 +1,137 @@
+.container__Movie{
+    margin: 0;
+    width: 100;
+    background: #3915a1;
+}
+
+.footer__Movie{
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    background: #0C0032;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 7vh;
+    text-align: center;
+}
+
+.header__Movie{
+    display : flex;
+    width: 85vw;
+    height: 80vh;
+    margin : 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.description__Movie{
+    display: flex;
+    width: 40vw;
+    height: 45vh;
+    margin-left: 15px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.affiche__Movie{
+    width: 18vw;
+    height: 50vh;
+    margin-right: 15px;
+    background: #ffffff;
+}
+
+/* *{
+    background: #3915a1;
+} */
+
+
+.title__Movie{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;    
+}
+
+.summary{
+    font-family: 'Ruda', sans-serif;
+}
+
+.title__Movie, .genre, .summary, .duration, .Note_utilisateur{
+    color: #ffffff
+}
+
+.Budget, .Note, .Revenu, .Note_utilisateur{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.section__movie{
+    width: 18vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Note {
+    border: solid 10px #3500D3;
+	width: 3.75vw;
+	height: 7.5vh;
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+    font-family: 'Ruda', sans-serif;
+}
+
+.title__Movie, .genre, .summary, .duration, .Note_utilisateur{
+    color: #ffffff
+}
+
+.Budget, .Note, .Revenu, .Note_utilisateur{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.section__movie{
+    width: 18vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Note{
+    border: solid 10px #3500D3;
+	width: 3.75vw;
+	height: 7.5vh;
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+    font-family: 'Ruda', sans-serif;
+}
+
+.title__Movie, .genre, .summary, .duration, .Note_utilisateur{
+    color: #ffffff
+}
+
+.Budget, .Note, .Revenu, .Note_utilisateur{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.section__movie{
+    width: 18vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Note{
+    border: solid 10px #3500D3;
+	width: 3.75vw;
+	height: 7.5vh;
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+}
+

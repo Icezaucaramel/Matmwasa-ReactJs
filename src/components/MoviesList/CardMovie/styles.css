@@ -1,0 +1,38 @@
+.container_cardmovie{
+    height: 33vw;
+    width: 21.697vw;
+    background: #282828;
+    border-radius: 30px;
+    margin-bottom: 4.033vw;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.container_cardmovie:hover{
+    transform: scale(1.08);
+    box-shadow: 1px 1px 10px #dddddd;
+}
+
+.movie_poster{
+    background: #ffffff;
+    width: 100%;
+    height: 24.525vw;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.title{
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 25px;
+    padding-top: 1.048vw;
+}
+
+.short_movie_description{
+    color: #ffffff;
+    font-family: 'Ruda', sans-serif;
+    font-size: 0.81vw;
+    margin: 5px 20px 0px;
+}
+
