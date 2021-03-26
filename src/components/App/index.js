@@ -11,7 +11,7 @@ import './styles.css';
 import MoviesList from '../MoviesList';
 import Movie from '../Movie';
 
-// component App
+
 const App = () => {
   // useState === hook
   // info : https://fr.reactjs.org/docs/hooks-state.html
@@ -64,7 +64,7 @@ const App = () => {
 
 
 
-  // getRandomMovies : KO => request to retrieve a random list of trending films
+  // getRandomMovies : => request to retrieve a random list of trending films
   // for the movie generation function to work, the API link for trending movies was used
   
   useEffect(() => {
@@ -105,38 +105,6 @@ const App = () => {
       });
   };
 
-
-  // const getRandomId = (min, max) => {
-  //   return Math.floor(Math.random() * (max - min + 1)) + min;
-  // };
-
-  // const randomIdMovies = [];
-
-  // // generation of 20 ids of films
-  // for (let index = 0; index < 20; index++) {
-  //   const id = getRandomId(1, 100000);
-  //   randomIdMovies.push(id);
-  // };
-
-  // const randomMovies = [];
-
-  // const requestForOneMovie = (id) => {
-  //   return axios.get(`https://${url}/3/movie/${id}?api_key=${apiKey}&language=fr-FR`)
-  //     .then((response) => {
-  //       return response.data;
-  //     });
-  // };
-
-  // const getRandomMovies = () => {
-  //   randomIdMovies.forEach(randomIdMovie => {
-  //     requestForOneMovie(randomIdMovie).then(data => {
-  //       randomMovies.push(data);
-  //       return randomMovies;
-  //     });
-  //   })
-  // };
-
-  // console.log(getRandomMovies());
 
   // rendering of the component
   return (
