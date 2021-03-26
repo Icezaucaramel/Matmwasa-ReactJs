@@ -21,6 +21,7 @@ const Movie = ({
     return (
         <>
             <div className="return-button" onClick={() => {
+                // using the History API to go back to the previous page
                 history.goBack();
             }}>
                 <svg width="43" height="37" viewBox="0 0 73 67" fill="none" xmlns="http://www.w3.org/2000/svg">
