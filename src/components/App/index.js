@@ -1,5 +1,5 @@
 // npm import
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 // axios allows you to make requests to an API
 import axios from 'axios';
@@ -18,8 +18,8 @@ const App = () => {
   // hook which allows to benefit from a local state without having to write classes
   // the "react-redux" package allows to benefit from a global state (not use for this project)
   // info : https://react-redux.js.org/introduction/getting-started
-  // l'intérêt d'utiliser "useState" est de ne pas perdre le contenu d'une variable suite à un changement de page, et de pouvoir lui assigner facilement du contenu grâce à une fonction
-  // attention /!\ utiliser "useState" n'empêche pas la perte du state lors du rechargement de l'application. pour cela, il faudrait stocker les données dans le local storage
+  // the interest of using "useState" is not to lose the content of a variable following a change of page, and to be able to easily assign content to it thanks to a function
+  // be careful /!/ using "useState" doesn't prevent the loss of the state when the application is reloaded. for that, you would have to store the data in the local storage
   // info : https://www.robinwieruch.de/local-storage-react
 
   // "movies" stores the films (search/generation result)
@@ -28,6 +28,7 @@ const App = () => {
   const [query, setQuery] = useState('');
   // "movie" stores information from a movie after clicking on a card
   const [movie, setMovie] = useState({});
+  
   const [numberPages, setNumberPages] = useState(1);
   
   // variables to connect to API
@@ -40,6 +41,7 @@ const App = () => {
     axios.get(`https://${url}/3/search/movie?api_key=${apiKey}&language=fr-FR&query=${query}&page=${pageNumber}`)
       .then((response) => {
         // we use "setMovies" to assign the result of our search to the "movies" variable
+        // we use "SetNumberPages" to assign the number of pages of our search to numberPages
         setNumberPages(response.data.total_pages);
         setMovies(response.data.results);
       })
@@ -60,13 +62,37 @@ const App = () => {
     })
   };
 
+
+
+  // getRandomMovies : KO => request to retrieve a random list of trending films
+  // for the movie generation function to work, the API link for trending movies was used
+  
+  useEffect(() => {
+  
+    const randomPage = (min, max) => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    const getRandomMovies = () => {
+      const pageNumber = randomPage(1, 1000);
+      // sending a request to retrieve random trending films
+      axios.get(`https://${url}/3/trending/all/day?api_key=${apiKey}&page=${pageNumber}`)
+        .then((response) => {
+          // we use setMovies to assign the results of our search to the "movies" variabe
+          setMovies(response.data.results);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
+    getRandomMovies();
+  
+  },[])
+  
   const randomPage = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  // getRandomMovies : KO => request to retrieve a random list of films
-  // for the movie generation function to work, the API link for trending movies was used
-  // but it's impossible to use it when starting the application, because it triggers an infinite loop (call the function => render the application => which triggers a new call)
   const getRandomMovies = () => {
     const pageNumber = randomPage(1, 1000);
 
@@ -78,6 +104,7 @@ const App = () => {
         console.log(error);
       });
   };
+
 
   // const getRandomId = (min, max) => {
   //   return Math.floor(Math.random() * (max - min + 1)) + min;
