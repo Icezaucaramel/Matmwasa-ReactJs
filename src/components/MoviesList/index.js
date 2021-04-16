@@ -4,6 +4,7 @@ import './styles.css';
 
 import CardMovie from './CardMovie';
 
+
 const MoviesList = ({
     movies,
     getSearchedMovies,
@@ -70,11 +71,12 @@ const MoviesList = ({
                     <>
                         <div className="container_card-movie">
                             {
-                                movies.map(movie => {
+                                movies.map((movie, index) => {
                                     return (
-                                        <CardMovie {...movie} getOneMovie={getOneMovie} />
+                                        <CardMovie key={index} {...movie} getOneMovie={getOneMovie} />
                                     )
                                 })
+                                
                             }
                         </div>                        
                         <div className="container__pagination">

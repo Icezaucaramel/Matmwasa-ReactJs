@@ -5,7 +5,7 @@ import posterMissing from '../../../assets/poster_missing.png'
 
 import './styles.css';
 
-const CardMovie = ({ id, original_title, poster_path, overview, release_date, getOneMovie }) => {
+const CardMovie = ({ id, title, name, poster_path, overview, release_date, getOneMovie }) => {
   const urlMovie = `/movie/${id}`;
 
   return (
@@ -24,7 +24,8 @@ const CardMovie = ({ id, original_title, poster_path, overview, release_date, ge
           </div>
             <div className="container__header">
                 <div className="title">
-                  {original_title ? original_title : 'Pas de titre'}
+                  {title ? title : ''}
+                  {name ? name : ''}
                   ({release_date ? release_date.substring(0, 4) : 'XXXX'})
                 </div>
             </div>

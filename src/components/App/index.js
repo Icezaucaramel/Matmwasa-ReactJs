@@ -76,7 +76,7 @@ const App = () => {
     const getRandomMovies = () => {
       const pageNumber = randomPage(1, 1000);
       // sending a request to retrieve random trending films
-      axios.get(`https://${url}/3/trending/all/day?api_key=${apiKey}&page=${pageNumber}`)
+      axios.get(`https://${url}/3/trending/movie/day?api_key=${apiKey}&page=${pageNumber}`)
         .then((response) => {
           // we use setMovies to assign the results of our search to the "movies" variabe
           setMovies(response.data.results);
